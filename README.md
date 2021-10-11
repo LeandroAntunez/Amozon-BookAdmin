@@ -1,6 +1,6 @@
 # Amozon, the Book Admin.
 
-Amozon it's an application created with ReactJS, that administer a books page.
+Amozon it's an application created with ReactJS, HTML and CSS, that administer a books page.
 
 ## What can i do?
 
@@ -9,6 +9,8 @@ Amozon it's an application created with ReactJS, that administer a books page.
   * Create books: By selecting the add new book button, you can create a new book with title, image name and rating.
   * Delete books: You can remove a book from the gallery.
 
+## How i can deploy it?
+
+ * Like another reactJS app, Writing in the terminal "npm start".
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-

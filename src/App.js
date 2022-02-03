@@ -28,7 +28,7 @@ class App extends React.Component {
 
   initBooks = () =>{
     this.setState((state, props) => ({
-      copyBooks: [ ... state.books]
+      copyBooks: [ ...state.books]
     }));
   }
 
@@ -37,7 +37,7 @@ class App extends React.Component {
       this.initBooks();
     }
     else {
-      const temp = [ ... this.state.books];
+      const temp = [ ...this.state.books];
       let res = [];
 
       temp.forEach(item => {
@@ -45,37 +45,37 @@ class App extends React.Component {
           res.push(item);
         }
       });
-      this.setState({copyBooks: [ ... res]});
+      this.setState({copyBooks: [ ...res]});
     }
   }
 
   onAdd = (item) => {
-    let temp = [ ... this.state.books];
+    let temp = [ ...this.state.books];
     const id = temp[temp.length-1].id + 1;
     item['id'] = id;
     temp.push(item);
 
-    this.setState({books: [ ... temp ]});
+    this.setState({books: [ ...temp ]});
     this.initBooks();
   }
 
   onUpdateRating = (item) =>{
-    var temp = [ ... this.state.books];
+    var temp = [ ...this.state.books];
     const index = temp.findIndex(x => x.id === item.id);
 
     temp[index].title = item.title;
     temp[index].image = item.image;
     temp[index].rating = item.rating;
 
-    this.setState({books: [ ... temp]});
+    this.setState({books: [ ...temp]});
     this.initBooks();
   }
 
   onRemove = (id) => {
-    var temp = [ ... this.state.books];
-    const res = temp.filter(item => item.id != id);
+    var temp = [ ...this.state.books];
+    const res = temp.filter(item => item.id !== id);
 
-    this.setState({books: [ ... res]});
+    this.setState({books: [ ...res]});
     this.initBooks();
   }
 

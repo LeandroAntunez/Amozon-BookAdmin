@@ -25,7 +25,6 @@ class Item extends React.Component {
     } 
 
     onChangeRating = e => {
-        const rating = parseInt(e.target.value);
 
         this.setState({
             rating: parseInt(e.target.value),
@@ -41,20 +40,20 @@ class Item extends React.Component {
             })
     }
 
-    onRemove = e => {
+    onRemove = () => {
         this.props.onRemove(this.props.id);
     }
 
     render(){
         return(
             <div className="item">
-                <div className="image"><img src={'img/' + this.state.image} width="100%" /></div>
+                <div className="image"><img src={'img/' + this.state.image} alt="Book cover" width="100%" /></div>
                 <div className="title">{this.state.title}</div>
                 <div className="rating">
                     <p>
                         {
                             this.state.stars.map(x =>
-                                <img src="img/star.png" width="32" />)
+                                <img src="img/star.png" alt="Star rating" width="32" />)
                         }
 
                     </p>
